@@ -13,3 +13,7 @@ What if you were the AI software behind Star Trek’s replicator?
 Er… er… coming right up (?)… 
 
 A nightmare in menu form. Many many menus… and with none of them in view
+
+Resources used:
+The menu demo cart from https://www.lexaloffle.com/bbs/?tid=27725
+
