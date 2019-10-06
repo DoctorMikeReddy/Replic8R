@@ -32,3 +32,4 @@ which might be easier)
 MIDI from here http://www.vic-fontaine.com/tng.php if I can get midi2pico working!
 https://github.com/andmatand/midi-to-pico8
 https://github.com/gamax92/midi2pico
+https://www.reddit.com/r/pico8/comments/3ogo81/pico8_music_tracker_tutorial_series/
