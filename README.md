@@ -25,3 +25,10 @@ Using Sublime Editor with Pico-8 and Lua extensions to just copy and paste :-)
 Wouldn't it be nice if I could get the theme in Pico-8 form; something like this: https://www.youtube.com/watch?v=R3TMFRkEyTE or https://www.youtube.com/watch?v=DTEUGkTbXys
 Ahah! What about THIS? https://www.youtube.com/watch?v=ghtc3bUuANA
 Yes!!!
+(Or https://www.youtube.com/watch?v=o7F63cJQe7k or 
+https://www.youtube.com/watch?v=285AMK3kqrM 
+which might be easier)
+
+MIDI from here http://www.vic-fontaine.com/tng.php if I can get midi2pico working!
+https://github.com/andmatand/midi-to-pico8
+https://github.com/gamax92/midi2pico
