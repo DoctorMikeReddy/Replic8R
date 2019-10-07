@@ -47,16 +47,17 @@ function draw_options()
    rectfill(cx,m.y+oset-1,cx+36,m.y+oset+5,col1)
    print(m.options[i],cx+1,m.y+oset,col2)
   else
-   print(m.options[i],m.x,m.y+oset,col1)
+   print("")
+--   print(m.options[i],m.x,m.y+oset,col1)
   end
  end
 end
 
 function draw_pico8()
- m.footer1="    1"
- m.footer2="    2"
- m.footer3="    3"
- m.footer4="    4"
+ m.footer1="    with thanks for the engine:"
+ m.footer2="    pico8 http://lexaloffle.com"
+ m.footer3="    menu sample /bbs/?tid=27725"
+ m.footer4="    sttng icons /bbs/?tid=3737"
  ox=2
  oy=104
  pal(7,col1)
@@ -65,10 +66,10 @@ function draw_pico8()
 end
 
 function draw_mj38()
- m.footer1="    1"
- m.footer2="    2"
- m.footer3="    3"
- m.footer4="    4"
+ m.footer1="    https://itch.io/jam"
+ m.footer2="      /mini-jam-38-food"
+ m.footer3="    theme for #38: food"
+ m.footer4="    limit: only arrow keys"
  ox=2
  oy=104
  pal(7,col1)
@@ -77,10 +78,10 @@ function draw_mj38()
 end
 
 function draw_ld45()
- m.footer1="    1"
- m.footer2="    2"
- m.footer3="    3"
- m.footer4="    4"
+ m.footer1="    https://ldjam.com/events"
+ m.footer2="             /ludum-dare/45/"
+ m.footer3="    theme for ludum dare #45"
+ m.footer4="    'start with nothing'"
  ox=2
  oy=104
  pal(7,col1)
@@ -89,10 +90,10 @@ function draw_ld45()
 end
 
 function draw_usw()
- m.footer1="    1"
- m.footer2="    2"
- m.footer3="    3"
- m.footer4="    4"
+ m.footer1="    i teach game dev at usw:"
+ m.footer2="    https://southwales.ac.uk/"
+ m.footer3="    food + start with nothing"
+ m.footer4="    just suggested replicator"
  ox=2
  oy=104
  pal(7,col1)
@@ -165,10 +166,10 @@ function draw_menu()
  if (usw==true) draw_usw()
  --rect(0,0,127,127,6)
  rect(0,96,127,20,6)
- print(m.footer1,4,99,6)
- print(m.footer2,4,106,6)
- print(m.footer3,4,113,6)
- print(m.footer4,4,120,6)
+ print(m.footer1,3,99,6)
+ print(m.footer2,3,106,6)
+ print(m.footer3,3,113,6)
+ print(m.footer4,3,120,6)
 end
 -->8
 -- credits menu
@@ -185,7 +186,7 @@ function init_credits()
  "by doctor mike reddy {c} 2019."
  
  m.sel=1
- m.options={"pico-8","mj38","ld45","usw"}
+ m.options={"usw","pico-8","mj38","ld45"}
  m.amt=0
  for i in all(m.options) do
   m.amt+=1
@@ -229,6 +230,61 @@ function update_credits()
 end
 -->8
 -- machine learning menu
+
+function init_tutorial()
+ m.header="tutorial - make it so!"
+ m.footer1=
+ "an ai menu nightmare in pico-8"
+ m.footer2=
+ "for the ludum dare #45 and the"
+ m.footer3=
+ "mini game jam #38 october jams"
+ m.footer4=
+ "by doctor mike reddy {c} 2019."
+ 
+ m.sel=1
+ m.options={"pico-8","mj38","ld45","dr mike"}
+ m.amt=0
+ for i in all(m.options) do
+  m.amt+=1
+ end
+ sub_mode=1
+ menu_timer=0
+end
+
+function update_tutorial()
+ if (btnp(0)) then
+  pico8=false
+  mj38=false
+  ld45=false
+  usw=false
+  init_menu()
+ end
+ if btnp(1) and
+ menu_timer>1 then
+  if m.options[m.sel]=="pico-8" then
+   pico8=true
+   mj38=false
+   ld45=false
+   usw=false
+  elseif m.options[m.sel]=="mj38" then
+   pico8=false
+   mj38=true
+   ld45=false
+   usw=false
+  elseif m.options[m.sel]=="ld45" then
+   pico8=false
+   mj38=false
+   ld45=true
+   usw=false
+  elseif m.options[m.sel]=="dr mike" then
+   pico8=false
+   mj38=false
+   ld45=false
+   usw=true
+  end
+ end
+end
 -->8
 -- deployment menu
 
